@@ -1,0 +1,54 @@
+{
+  "name": "astro-ai",
+  "version": "1.0.0",
+  "description": "Production-ready MERN backend architecture for an AI-powered astrology application.",
+  "main": "backend/src/server.js",
+  "scripts": {
+    "dev": "node scripts/dev-all.js",
+    "dev:all": "node scripts/dev-all.js",
+    "dev:backend": "nodemon backend/src/server.js",
+    "dev:frontend": "vite --host 127.0.0.1 --port 5173",
+    "dev:ai": "npm --prefix ai-service run dev",
+    "build:frontend": "vite build",
+    "preview:frontend": "vite preview --host 127.0.0.1 --port 4173",
+    "start": "node backend/src/server.js",
+    "lint": "eslint backend/src frontend/src ai-service/src --ext .js,.jsx",
+    "test": "node --test backend/tests/*.test.js",
+    "seed:signs": "node backend/scripts/seedSignInfo.js",
+    "admin:promote": "node backend/scripts/promoteAdmin.js"
+  },
+  "keywords": [
+    "mern",
+    "astrology",
+    "ai",
+    "horoscope"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "axios": "^1.18.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^1.20.0",
+    "mongoose": "^8.9.5",
+    "node-cache": "^5.1.2",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "vite": "^8.0.16",
+    "winston": "^3.17.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.18.0",
+    "nodemon": "^3.1.9"
+  }
+}
